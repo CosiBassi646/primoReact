@@ -1,0 +1,31 @@
+import logo from './logo.svg';
+import './App.css';
+
+import { useState } from 'react';
+
+const [count, setCount] = useState(0);
+
+function handleClick() {
+  setCount(count + 1);
+}
+
+function MyButton() {
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <h1>Counters that update at the same time</h1>
+      <MyButton />
+      <MyButton />
+    </div>
+  );
+}
+
+export default App;
